@@ -1880,3 +1880,21 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+@media (min-width: 768px) {
+  .project-list {
+    /* Memastikan semua baris di grid punya ruang yang sama */
+    grid-auto-rows: 1fr;
+  }
+
+  .project-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Memaksa kartu mengisi tinggi sel gridnya */
+  }
+
+  .project-item > .project-link {
+    /* Perintah agar area gambar meregang mengisi ruang kosong */
+    flex-grow: 1;
+  }
+}
